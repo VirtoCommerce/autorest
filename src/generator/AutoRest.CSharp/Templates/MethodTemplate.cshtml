@@ -289,7 +289,7 @@ else
             @:if (_errorBody != null)
             @:{
                 @:@(Model.InitializeExceptionWithMessage)
-                @:ex.Body = _errorBody;
+                @*@:ex.Body = _errorBody;*@
             @:}
         @:}
         @:catch (Newtonsoft.Json.JsonException)
@@ -308,8 +308,10 @@ else
         @:}
     }
 
-        ex.Request = new Microsoft.Rest.HttpRequestMessageWrapper(_httpRequest, _requestContent);
-        ex.Response = new Microsoft.Rest.HttpResponseMessageWrapper(_httpResponse, _responseContent);
+        if (!string.IsNullOrEmpty(_responseContent)){
+            ex = new @(Model.OperationExceptionTypeString)(ex.Message +"\r\n"+ _responseContent);
+        }
+        var aB = _requestContent;
         @(Model.InitializeException)
         if (_shouldTrace)
         {

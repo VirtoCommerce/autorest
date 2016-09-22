@@ -231,7 +231,7 @@ namespace AutoRest.CSharp.TemplateModels
                 }
                 else
                 {
-                    return "Microsoft.Rest.HttpOperationException";
+                    return "System.Exception";
                 }
             }
         }
