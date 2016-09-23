@@ -47,17 +47,17 @@ namespace AutoRest.CSharp.TemplateModels
         {
             get
             {
-                if (Responses.Any())
-                {
-                    List<string> predicates = new List<string>();
-                    foreach (var responseStatus in Responses.Keys)
-                    {
-                        predicates.Add(string.Format(CultureInfo.InvariantCulture,
-                            "(int)_statusCode != {0}", GetStatusCodeReference(responseStatus)));
-                    }
+                //if (Responses.Any())
+                //{
+                //    List<string> predicates = new List<string>();
+                //    foreach (var responseStatus in Responses.Keys)
+                //    {
+                //        predicates.Add(string.Format(CultureInfo.InvariantCulture,
+                //            "(int)_statusCode != {0}", GetStatusCodeReference(responseStatus)));
+                //    }
 
-                    return string.Join(" && ", predicates);
-                }
+                //    return string.Join(" && ", predicates);
+                //}
                 return "!_httpResponse.IsSuccessStatusCode";
             }
         }      
