@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>autorest</id>
-    <title>AutoRest</title>
-    <version>$version$</version>
-    <authors>Microsoft</authors>
-    <owners>azure-sdk, Microsoft</owners>
+    <id>VirtoCommerce.autorest</id>
+    <title>VirtoCommerce.AutoRest</title>
+    <version>0.17.0-virto02</version>
+    <authors>Microsoft, Egidijus Mažeika</authors>
+    <owners>VirtoCommerce</owners>
     <licenseUrl>https://raw.githubusercontent.com/Microsoft/dotnet/master/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/Azure/AutoRest</projectUrl>
+    <projectUrl>https://github.com/VirtoCommerce/autorest</projectUrl>
     <iconUrl>https://cdn.rawgit.com/Azure/AutoRest/7c1576dfb56974176223545cfac5762d168ded5f/Documentation/images/autorest-small-flat.png</iconUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>AutoRest code generation of REST API client libraries.</summary>
     <description>The AutoRest tool generates client libraries for accessing REST APIs that are described using the Swagger format.</description>
-    <copyright>Copyright (c) Microsoft Corporation</copyright>
-    <tags>Microsoft AutoRest</tags>
+    <copyright>Copyright © VirtoCommerce</copyright>
+    <tags>VirtoCommerce AutoRest</tags>
   </metadata>
   <files>
     <file src="binaries/net45/AutoRest.exe" target="tools" />
